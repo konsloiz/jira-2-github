@@ -80,6 +80,7 @@ export interface AssigneeAttributes {
 
 
 export interface Attachments {
+  _text: any;
 }
 
 export interface Customfields {

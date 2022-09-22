@@ -1,7 +1,16 @@
-**Note**  This was a quick throw together works for me fine :) export your jira issues as xml and this will import into github issues. Requires [Github Token](https://github.com/settings/tokens/new) (requires repo access)
+
+# jira-2-github
+
+👉 This fork contains just some minor modifications, used in our project use-case, to additionaly migrate the Issues's descriptions to Github. 
+
+## Easily Migrate Jira Issues to Github
+
+Export your jira issues as xml and use this app to import them into github issues.
+
+🗣️ *Requires [Github Token](https://github.com/settings/tokens/new) (repo access)*
 
 **Exporting Jira issues**  
-Go to jira `issues & filters -> search`, filter out the issues that u want to import into your github project, then export/save as a `xml` file...   
+Go to jira `issues & filters -> search`, filter out the issues that u want to import into your github project, then export/save as a `xml` file. 
 
 ![screenshot](https://raw.githubusercontent.com/lukesUbuntu/jira-2-github/master/export_screenshot.png)
 
@@ -9,7 +18,7 @@ Go to jira `issues & filters -> search`, filter out the issues that u want to im
 
 
 **Importing Jira issues**  
-`git clone git@github.com:lukesUbuntu/jira-2-github.git`  
+`git clone git@github.com:konsloiz/jira-2-github.git`  
 
 `cd jira-2-github`   
 
@@ -19,7 +28,7 @@ Go to jira `issues & filters -> search`, filter out the issues that u want to im
 
 `cd dist`   
  
-edit config.json and update with required details
+Edit the config.json and update the required fields:
 
 ```
 {
@@ -33,6 +42,4 @@ edit config.json and update with required details
 
 `node app.js`    
 
-you will get a console.log of what would be imported, if happy edit config change dryRun to false and then `node app.js` 
-
-*Going to make a electron deskop app for easy importing and repo selection*
+You will get a console.log of what would be imported. If happy, edit the config.json, change `dryRun` to **false** and then run again `node app.js` 

@@ -44,7 +44,7 @@ jiraIssues().then((jiraIssues) => {
       if (issueTitles.indexOf(jiraIssue.title._text.toLowerCase()) === -1) {
         const newIssue: CreateGithubIssue = {
           title: jiraIssue.title._text,
-          body: `${jiraIssue.summary._text} link ${jiraIssue.link._text}`,
+          body: `${jiraIssue.summary._text} ${jiraIssue.description._text}  \n This issue was imported from Jira: ${jiraIssue.link._text}`,
         };
         if (appConfig.dryRun) {
           console.log(`Adding issue : ${newIssue.title}`);
